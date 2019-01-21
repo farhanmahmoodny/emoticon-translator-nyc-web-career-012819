@@ -5,9 +5,9 @@ def load_library(file_path)
   emoticons = {}
   path = YAML.load_file(file_path)
   path.each do |key, value|
-    emoticon[key] = value
+    emoticons[key] = value
   end
-  emoticon
+  emoticons
 end
 
 def get_japanese_emoticon
