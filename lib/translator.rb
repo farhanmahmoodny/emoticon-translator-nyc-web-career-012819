@@ -7,8 +7,6 @@ def load_library(file_path)
   emoticons["get_emoticon"] = {}
   emoticons["get_meaning"] = {}
   path.each do |key, array|
-    count = 0
-    until count == array.length
     emoticons["get_meaning"] << array[0]
     emoticons["get_meaning"]
   
