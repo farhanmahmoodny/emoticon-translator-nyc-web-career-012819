@@ -26,6 +26,15 @@ def get_japanese_emoticon(file_path, emo)
   end
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file_path, emo)
+  list = load_library(file_path)
+  if list["get_meaning"].keys.include(emo)
+    list["get_meaning"].each do |j_emo, name|
+      if j_emo == emo
+        return name
+      end
+    end
+  else
+    "Sorry, that emoticon was not found"
+  end
 end
