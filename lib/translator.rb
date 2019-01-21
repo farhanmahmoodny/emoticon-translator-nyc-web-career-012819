@@ -7,9 +7,10 @@ def load_library(file_path)
   emoticons["get_emoticon"] = {}
   emoticons["get_meaning"] = {}
   path.each do |key, array|
-    emoticons["get_meaning"] << array[0]
-    emoticons["get_meaning"]
-  
+    emoticons["get_meaning"][array[1]] << key
+    emoticons["get_emoticon"][array[2]] << key
+  end
+  emoticons
 end
 
 def get_japanese_emoticon
