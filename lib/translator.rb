@@ -28,7 +28,7 @@ end
 
 def get_english_meaning(file_path, emo)
   list = load_library(file_path)
-  if list["get_meaning"].keys.include(emo)
+  if list["get_meaning"].keys.include?(emo)
     list["get_meaning"].each do |j_emo, name|
       if j_emo == emo
         return name
