@@ -15,7 +15,7 @@ end
 
 def get_japanese_emoticon(file_path, emo)
   list = load_library(file_path)
-  list.each do 
+  if library[]
   
 end
 
