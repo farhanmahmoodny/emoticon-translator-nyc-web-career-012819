@@ -3,10 +3,10 @@ require "yaml"
 
 def load_library(file_path)
   emoticons = {}
-  path = YAML.load_file(file_path)
+  list = YAML.load_file(file_path)
   emoticons["get_emoticon"] = {}
   emoticons["get_meaning"] = {}
-  path.each do |key, array|
+  list.each do |key, array|
     emoticons["get_meaning"][array[1]] << key
     emoticons["get_emoticon"][array[0]] << array[1]
   end
